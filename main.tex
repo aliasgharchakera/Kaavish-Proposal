@@ -7,12 +7,15 @@
 \usepackage{graphicx}
 \usepackage{soul}
 \usepackage{titling}
+\usepackage[english]{babel}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BEGIN METADATA: Edit the following as appropriate
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Energy Consumption}  % the title of your project
+\title{IntelliWatt}%Illuminating Pakistan's Electricity Consumption and Billing*%  % the title of your project
 \newcommand\shorttitle{\thetitle}  % if needed: a shorter title for the document header
 % Team members.
 \newcommand\firstname{Ali Asghar Yousuf}  % full name
@@ -49,34 +52,219 @@
 % DATA: Populate the rest of the document as instructed.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Abstract}
-\instruction{Please write a 500-600 word abstract on the project idea. It should not be very technically written but should be understandable by anyone.}
-
+% \instruction{Please write a 500-600 word abstract on the project idea. It should not be very technically written but should be understandable by anyone.} \\
+Electricity consumption in Pakistan presents a multifaceted challenge marked by soaring costs per unit, unpredictable peak demand factors, frequent load shedding, and the influence of extreme weather conditions. These factors collectively result in escalating electricity bills for consumers across the nation. A significant challenge faced by most users is their limited awareness of their electricity consumption patterns, making it exceedingly challenging to manage their usage effectively. Existing billing systems provide minimal insights, hindering users from pinpointing areas where they can save electricity and reduce costs.
+\newline\newline
+In response to these pressing concerns, IntelliWatt aims to develop a mobile application tailored precisely to the Pakistani context. Leveraging predictive analysis, artificial intelligence (AI) concepts, and advanced data visualization techniques, our application intends to empower users with comprehensive insights into their electricity usage patterns. Beyond basic aggregate data, it will offer granular room-wise consumption breakdowns and forecasts for expected bills. Crucially, the application will provide actionable recommendations, enabling users to make informed decisions and proactively reduce their electricity bills.
+\newline\newline
+Beyond immediate electricity consumption management, our project holds significant societal relevance. Pakistan grapples with formidable challenges in ensuring affordable and reliable access to electricity for all its citizens. The escalating cost of electricity is particularly burdensome for households, especially those in low and middle-income communities. IntelliWatt is poised to be a transformative solution that empowers users to manage their electricity consumption effectively, comprehend their bills, and actively participate in sustainable energy practices. By democratizing access to electricity consumption data, the application promotes financial literacy, fosters responsible energy usage, and aligns with the United Nations' sustainable goals related to reducing inequalities in access to essential services.
+\newline\newline
+While existing solutions in Pakistan are limited, primarily catering to users with solar panel installations, IntelliWatt distinguishes itself by comprehensively addressing the needs of typical grid-connected users. We are committed to adapting our application to the unique dynamics of the Pakistani energy landscape, considering local factors such as electricity pricing structures, peak demand fluctuations, load shedding schedules, and the influence of extreme weather conditions. Additionally, our focus on room-wise consumption analytics and personalized recommendations sets us apart from generic energy management apps.
+\newline\newline
+IntelliWatt will require a multidisciplinary approach, drawing upon expertise in Machine Learning and Deep Learning for predictive analytics, Web Development for creating the mobile application, Data Science for handling and analyzing consumption data, and accuracy validation, creating a user-friendly application, and training accurate machine learning models with limited data loom large. Nonetheless, we are resolute in our commitment to addressing these challenges head-on and delivering a transformative solution that will revolutionize the way Pakistan consumes and manages electricity.
 \section{Problem definition}
-\instruction{Describe the problem that the project addresses.}
-
-\section{Social relevance}
-\instruction{Describe any societal problem that the project addresses.}
-
+% \instruction{Describe the problem that the project addresses.} \\
+In Pakistan, electricity consumption poses significant challenges, including high costs, erratic demand, frequent power outages, and a lack of awareness among consumers regarding their usage patterns. Existing billing systems provide limited insights and may lead to overbilling. These issues result in financial burdens for households. To address this problem, we aim to develop the "IntelliWatt" mobile application, tailored to the Pakistani context, to empower users with accurate consumption data, insights, and cost-saving recommendations. This app will help users optimize their electricity usage, reduce bills, and contribute to financial stability
+ \section{Social relevance}
+ %\instruction{Describe any societal problem that the project addresses.}
+    Pakistan faces significant challenges in ensuring affordable and reliable access to electricity for its citizens. The rising cost of electricity is a financial burden for households, particularly low and middle-income communities. There is a pressing need for tools that empower users to manage their electricity consumption effectively and understand their bills.
+    \newline\newline
+    IntelliWatt's social relevance extends beyond addressing the pressing issues of rising electricity bills and the need for improved energy expense management. It directly impacts society by offering detailed consumption insights to users. By providing comprehensive breakdowns of electricity usage, including room-wise analysis and expected bills, the application empowers users to gain a deeper understanding of their consumption patterns, enabling them to make informed decisions about their energy use.
+    \newline\newline    
+    Moreover, IntelliWatt employs cutting-edge predictive analysis and artificial intelligence to accurately forecast users' future electricity usage and bills. This predictive capability plays a vital role in helping users plan their energy consumption efficiently, ultimately leading to cost savings.
+    \newline\newline
+    The social impact is further amplified by the app's user-specific insights. IntelliWatt tailors its recommendations and insights based on individual user data, considering factors such as tariffs (commercial or residential), the number of people in a household, peak factors, and appliance usage. This high level of customization ensures that users receive highly relevant and actionable information, enhancing their ability to manage their energy expenses effectively.
+    \newline\newline
+    IntelliWatt goes even deeper by calculating electricity usage for individual rooms or spaces within a user's home. This granular breakdown allows users to identify which areas contribute the most to their bills, facilitating targeted energy-saving efforts.
+    \newline\newline
+    Additionally, the application fosters a sense of community and competition by enabling users to compare their bills and consumption with others in similar situations, such as the same region, the same number of occupants, and similar appliances. This feature encourages energy-saving practices and a collective effort to reduce electricity consumption.
+    \newline\newline
+    In summary, IntelliWatt not only addresses immediate societal concerns related to electricity bills but also actively contributes to a more informed, efficient, and accountable energy consumption ecosystem, ultimately benefiting individuals, households, and the larger community.
+    
 \section{Originality/Novelty}
-\instruction{Describe the value of solving the problem. Compare and contrast with any existing solutions.}
+
+\subsection{Existing Solutions}
+
+In Pakistan, existing solutions primarily comprise a handful of apps offered by solar companies like K-Electricity Solar. These applications are designed primarily for users with solar panel installations and thus fall short in providing comprehensive solutions for the broader audience of grid-connected users. These existing apps lack the necessary depth and customization required to address the intricate challenges associated with electricity consumption and billing for typical grid users.
+
+\subsection{Our Solution}
+
+Our project, IntelliWatt, introduces an approach to tackle the issues surrounding electricity consumption and billing in Pakistan. What sets us apart from existing solutions are the following key differentiators:
+
+\begin{itemize}
+  \item \textbf{Tailored to the Pakistani Context:} IntelliWatt is meticulously tailored to the unique nuances of Pakistan's electricity landscape. We take into account local factors such as fluctuating electricity pricing structures, frequent peak demand periods, unpredictable load shedding, and the impact of extreme weather conditions on consumption. This local contextualization ensures that our solution is not only relevant but highly effective in addressing the specific challenges faced by Pakistani consumers.
+  \item \textbf{Granular Room-wise Consumption Analysis:} Unlike generic energy management apps, IntelliWatt goes beyond the conventional by offering room-wise electricity consumption breakdowns. This granular level of insight allows users to identify precisely which areas or spaces within their homes contribute the most to their electricity bills. Armed with this knowledge, users can implement highly targeted energy-saving strategies, resulting in substantial cost reductions.
+  \item \textbf{Optimal Usage Recommendations:} Another groundbreaking feature of IntelliWatt is its ability to provide personalized, real-time recommendations for optimal electricity usage. These recommendations are driven by predictive analytics and AI, which take into account factors like weather forecasts. For example, during breezy weather, the app suggests opening windows to utilize natural wind instead of energy-intensive air conditioners. Similarly, on sunny days, it advises users to rely on natural daylight rather than artificial lighting. These suggestions translate directly into cost savings, allowing users to make informed decisions that positively impact their bills.
+\end{itemize}
+
+Through the following application we address the unique challenges faced by typical grid-connected users in Pakistan, delivering a level of customization, granularity, and predictive capability that in the current landscape of electricity management applications is an advancement. IntelliWatt is a leap forward in empowering Pakistani consumers to take control of their electricity consumption and understanding their electricity billing.
 
 \section{CS contribution}
-\instruction{Describe the CS component of the project, e.g. the higher level CS courses that contribute to it.}
+% \instruction{Describe the CS component of the project, e.g. the higher level CS courses that contribute to it.}    
+    Our project, IntelliWatt, draws upon a diverse set of computer science (CS) courses and concepts to address the complex challenges of electricity consumption prediction and billing estimation in Pakistan. The following CS courses are instrumental in shaping our project's success:
+    
+    \subsection{Machine Learning and Deep Learning}
+    
+    Machine Learning (ML) and Deep Learning (DL) are foundational components of IntelliWatt. ML algorithms, including deep neural networks, play a pivotal role in predictive analysis. By analyzing historical electricity consumption data, these algorithms enable us to forecast users' future usage and bills with remarkable accuracy. The integration of DL techniques allows us to extract meaningful insights from vast datasets, enhancing the precision of our predictions.
+    
+    \subsection{Computational Intelligence}
+    
+    The field of Computational Intelligence augments IntelliWatt by optimizing usage patterns for maximum efficiency. By leveraging computational intelligence techniques, we ensure that our app suggests strategies that not only minimize electricity consumption but also maintain user comfort and convenience. This CS discipline guides us in striking a balance between lower unit consumption and reduced bills while accommodating individual preferences.
+    
+    \subsection{Data Science}
+    
+    Data Science plays a pivotal role in handling and analyzing the extensive consumption data we collect. Courses in Data Science provide us with the expertise to preprocess, clean, and extract valuable insights from raw data. Through data visualization and statistical analysis, we derive actionable recommendations for users to optimize their electricity usage efficiently.
+    
+    
+    \subsection{Human-Computer Interaction}
+    
+    Human-Computer Interaction (HCI) principles are woven into the fabric of IntelliWatt's design philosophy. HCI courses guide us in creating an app interface that is not only user-friendly but also accessible to diverse users. We prioritize the seamless interaction between users and our application, ensuring that individuals of all backgrounds and abilities can benefit from the insights and recommendations we provide.
+    
+    
+    \subsection{Software Engineering}
+    
+    The development of a user-friendly and feature-rich mobile application is at the heart of IntelliWatt. App Development courses have equipped us with the skills needed to design and build an intuitive interface that empowers users to access their consumption data effortlessly. Our app's development spans various technologies, including HTML, CSS, JavaScript, and Python for backend development, ensuring a seamless user experience.
+    \newline
+    \newline
+    In addition to these core CS contributions, we remain open to integrating other relevant CS courses and concepts as the project evolves. IntelliWatt is a testament to the interdisciplinary nature of computer science, where diverse knowledge areas converge to deliver innovative solutions that positively impact society.
 
 \section{Scope and Deliverables}
-\instruction{Justify the scope of the project with respect to the size of the team and the year long duration. List the foreseeable deliverables.}
+
+The scope of our project, IntelliWatt, is ambitious yet achievable given the team's size of four members and the year-long duration. Our project aims to address the challenges of electricity consumption and billing in Pakistan by leveraging advanced technologies, including machine learning and artificial intelligence.
+
+\subsection{Component 1: Building and Deploying the Deep Learning Model}
+
+In Component 1, we focus on the development and deployment of a deep learning model for accurate electricity consumption prediction. This component involves the following key activities:
+
+\begin{itemize}
+    \item \textbf{Literature Review (7-10 days):} We will conduct a comprehensive literature review to understand existing solutions and context. Each team member will focus on specific aspects of the literature to ensure a thorough review.
+    
+    \item \textbf{Data Collection (2-3 weeks):} Collecting sufficient training data is crucial for training a high-accuracy deep learning model. The timeline for data collection may vary based on data source complexity. We will allocate the necessary resources and expertise for data gathering.
+    
+    \item \textbf{Model Development:} Developing a robust deep learning model is a challenging task. With the time duration that we have, we will try to build, train, and fine-tune the model to the best of our abilities.
+
+     \item \textbf{Main Features:} The deep learning model development includes the incorporation of key features that enhance its value and utility:
+    
+    \begin{itemize}
+        \item \textbf{Detailed Consumption Insights:} Empowering users to understand their electricity consumption patterns, including room-wise breakdowns and expected bills.
+        \item \textbf{Predictive Analysis:} Enabling accurate forecasts of users' future electricity usage and bills through predictive analysis and artificial intelligence.
+        \item \textbf{User-Specific Insights:} Tailoring recommendations and insights based on user-specific data, such as tariffs, household size, peak factors, and appliance usage.
+        \item \textbf{Individual Room Consumption:} Calculating electricity usage for individual rooms or spaces, allowing users to identify areas contributing the most to their bills and promoting targeted energy-saving efforts.
+    \end{itemize}
+    
+    \item \textbf{Publication:} Documenting our project's methodology, findings, and results for publication is a significant goal. We will allocate time for research paper preparation, which will run parallel to other project activities.
+\end{itemize}
+
+\subsection{Component 2: Building User-Friendly Application}
+
+Component 2 focuses on creating a user-friendly mobile application that incorporates the deep learning model and additional features. This component includes the following key activities:
+
+\begin{itemize}
+    \item \textbf{Application Development:} We will dedicate a significant portion of the project to creating a user-friendly mobile application. The application will serve as the primary interface for users and will seamlessly integrate the deep learning model for accurate predictions.
+    
+       \item \textbf{Additional Features:} In addition to the core application development, the project will focus on implementing several additional features that enhance the user experience and utility of the application:
+    
+    \begin{itemize}
+        \item \textbf{Bill Alerts:} The app monitors real-time electricity consumption patterns and provides bill alerts when usage is projected to exceed a specific threshold just above the current slab rate. This proactive notification empowers users to take immediate action to save money.
+        
+        \item \textbf{Optimal Usage Patterns:} IntelliWatt offers personalized optimal usage patterns based on predictive analytics and weather forecasts. It recommends energy-saving practices, such as using natural warmth during cold weather and utilizing daylight during sunny days.
+        
+        \item \textbf{Room Sharing Optimization:} In shared living spaces, the app calculates individual electricity consumption for each occupant, promoting fairness and accountability among roommates.
+        
+        \item \textbf{Overbilling Check:} IntelliWatt incorporates an algorithm to detect potential overbilling. Users receive alerts if their bills significantly deviate from predicted usage patterns, allowing them to investigate and rectify billing discrepancies.
+        
+        \item \textbf{Continuous Tips and Recommendations:} The app provides users with ongoing tips and recommendations for reducing electricity consumption. These suggestions cover various aspects, from adjusting thermostat settings to adopting energy-efficient practices.
+    \end{itemize}
+    
+    \item \textbf{Deployment:} Deploying the final application with all features is a complex process. We will allocate time for rigorous testing and debugging to ensure a seamless and reliable user experience.
+\end{itemize}
+
+\subsection{Deliverables}
+
+Our project will deliver the following main components:
+
+\begin{enumerate}
+    \item \textbf{Deep Learning Model:} A highly accurate deep learning model for electricity consumption prediction.
+    
+    \item \textbf{Mobile Application:} A fully functional mobile application tailored to the Pakistani context, enabling electricity consumption prediction and billing estimation.
+    
+    \item \textbf{Research Paper:} A research paper documenting our project's methodology, findings, and results for publication in academic journals.
+\end{enumerate}
+
+In addition to these main components, our project will deliver a comprehensive mobile application with advanced features, including bill alerts, optimal usage patterns, room sharing optimization, overbilling checks, and continuous tips and recommendations. These features will empower users to manage their electricity consumption effectively and reduce their bills.
+
+
 
 \section{Feasibility}
-\instruction{List the resources, e.g. datasets, compute resources, software libraries, hardware, required for the project. Mention how you expect to access and utilize them for the project.}
+\subsection{Dataset Collection}
 
-\section{Team dynamics}
-\instruction{Justify the suitability of the team members to the project. For example, their relevant courses, projects, internships, or research.}
+Acquiring a diverse and comprehensive dataset is a fundamental requirement for training our deep learning model in the IntelliWatt project. Our team will be responsible for the data collection process, with a specific focus on residents of Karachi, Pakistan, aligning with the project's geographical scope.
+
+Our dataset collection initiative is designed with the following objectives in mind:
+
+\begin{itemize}
+    \item \textbf{Diversity:} Our primary goal is to assemble a dataset that embodies the wide-ranging demographic, social and economic diversity of Karachi. This diversity is crucial for training a deep learning model capable of accommodating the varied usage patterns and billing scenarios found in this region. This inclusive approach will enhance the robustness of our model and its ability to serve a broad user base
+    
+    \item \textbf{Appliance Usage and Billing Data:} The dataset will consist of appliance usage data and associated billing information. This combination is essential for training a model that can provide accurate predictions and valuable insights to our users.
+    
+    \item \textbf{Ethical Data Collection:} We are committed to upholding ethical standards in data collection. All data will be obtained with informed consent from participants, and stringent privacy and data protection measures will be implemented throughout the process.
+\end{itemize}
+
+Access to this diverse dataset will be facilitated through a combination of methods, including surveys, data requests from utility companies, and voluntary contributions from residents. Data quality will be a top priority, and our team will meticulously curate, clean, and preprocess the dataset to ensure its suitability for training the deep learning model.
+
+\subsection{Hardware Requirements}
+
+To carry out the training phase of our deep learning model effectively, we require access to hardware equipped with a Graphics Processing Unit (GPU) or access to a virtual machine with GPU capabilities. This hardware configuration is essential for accelerating the training process, ensuring the model's accuracy, and enhancing its overall efficiency.
+\newline\newline
+In this context, we kindly request support and cooperation from our university, specifically the esteemed Computer Science department, to assist us in securing the necessary hardware resources. We are deeply appreciative of any assistance provided, as it will significantly contribute to the feasibility and success of our IntelliWatt project.
+\newline
+The combination of a diverse dataset and access to GPU-enabled hardware resources will empower our team to build a powerful and adaptable deep learning model, enabling IntelliWatt to deliver valuable services to users for managing their electricity consumption and bills effectively.
+
+
+\section{Team Dynamics}
+% \instruction{Justify the suitability of the team members to the project. For example, their relevant courses, projects, internships, or research.}
+
+\begin{itemize}
+    \item \textbf{Ali Asghar Yousuf} Ali serves as the Project Lead for IntelliWatt, bringing a wealth of knowledge and expertise in Computer Science to the team. His academic background includes advanced courses in Artificial Intelligence, Computational Intelligence, Software Engineering, Data Science, and Computer Graphics. These courses have provided him with a deep understanding of critical computer science concepts and theories, which are highly relevant to our project. During his internship at Pulflow, Ali had the opportunity to collaborate with industry experts and work effectively within a team environment. This hands-on experience not only enhanced his technical skills but also honed his ability to work seamlessly with others. In this project, Ali plays a crucial leadership role, leveraging his profound comprehension of team dynamics to optimize the entire team's performance across all tasks and deliverables required for both Kaavish I and Kaavish II.
+    
+    \item \textbf{Syed Ibrahim Ali Haider} Ibrahim contributes significantly to the IntelliWatt project, leveraging a diverse educational background that includes higher-level elective courses such as Artificial Intelligence, Computational Intelligence, Data Science, Social Network Analysis, Software Engineering, and Human-Computer Interaction. This broad spectrum of knowledge equips him with a strong foundation in various aspects of computer science. During a recent internship at Folio3, Ibrahim gained practical experience working in a collaborative team environment, actively contributing to product development. This hands-on experience has provided him with valuable insights and skills highly relevant to our project's goals. Ibrahim assumes a leadership role within the project, with a primary focus on the development of the IntelliWatt application. His expertise in software engineering and prior experience working in a team make him well-suited for this critical responsibility.
+    
+    \item \textbf{Muhammad Azeem Haider} Azeem's journey in Computer Science began during his sophomore year, and he has since developed a deep interest in data-related aspects of the discipline. His educational profile includes courses in Data Science, Social Network Analysis, Computer Vision, and Software Engineering. This well-rounded foundation enables him to approach various domains within computer science with confidence. As an undergraduate researcher in the Summer Tehqiq research program, Azeem gained valuable experience working alongside Professor Haseeb Shaikh. His research focused on the Cognitive Selection of Mental Representations, providing him with valuable research insights and mentorship. Within our IntelliWatt project, Azeem takes on a leadership role in the research domain. He will spearhead research efforts and play a prominent role in data modeling and prediction, leveraging his interdisciplinary knowledge and research experience.
+
+    \item \textbf{Mohammad Shahid Mahmood} Shahid is a valuable member of our team, currently enrolled in courses like Social Network Analysis and Quantum Computing, and he has previously completed courses in Web and Mobile Development and Reinforcement Learning. Additionally, he has a keen interest in Augmented Reality and brings essential Product Designing Skills to the team. Shahid has also gained practical experience at Global Resource, where he worked on Web Development and dabbled in AR development. In the IntelliWatt project, Shahid leads the development and design of the end product, leveraging his skills in web and mobile development and his proficiency in product design. His diverse background and practical experience make him an essential contributor to the project's success.
+\end{itemize}
 
 \section{Tech stack}
-\instruction{Write details of the tech stack you will use for this project for e.g. if you are using MERN stack, you can write MongoDB, Express, React and NodeJS etc.}
+% \instruction{Write details of the tech stack you will use for this project for e.g. if you are using MERN stack, you can write MongoDB, Express, React and NodeJS etc.}
+We plan to use the following technology stack to build the different components of our project.
+\subsection{Mobile Application}
+\begin{itemize}
+    \item React Native
+    \item Flutter
+    \item Node.Js
+    \item Python
+\end{itemize}
+\subsection{Deep/Machine Learning Model}
+\begin{itemize}
+    \item Python
+    \item Google Colab
+    \item Pandas
+    \item Numpy 
+    \item Scikit-Learn
+    \item Seaborn
+\end{itemize}
+
 
 \section{References}
-\instruction{List your references.}
+% \instruction{List your references.}
+\begin{itemize}
+    \item Amber, K. P., Ahmad, R., Farmanbar, M., Bashir, M. A., Mehmood, S., Khan, M. S., \& Saeed, M. U. (2021). Unlocking household electricity consumption in Pakistan. Buildings, 11(11), 566.
+    \item Lee, M. H. L., Ser, Y. C., Selvachandran, G., Thong, P. H., Cuong, L., Son, L. H., ... \& Gerogiannis, V. C. (2022). A comparative study of forecasting electricity consumption using machine learning models. Mathematics, 10(8), 1329.
+    \item Iftikhar, H., Bibi, N., Canas Rodrigues, P., \& López-Gonzales, J. L. (2023). Multiple Novel Decomposition Techniques for Time Series Forecasting: Application to Monthly Forecasting of Electricity Consumption in Pakistan. Energies, 16(6), 2579.
+    \item Predicting electricity energy consumption: A comparison of regression analysis, decision tree and neural networks
+\end{itemize}
+% \printbibliography
+
 
 % External advisor undertaking.
 \input{external}
